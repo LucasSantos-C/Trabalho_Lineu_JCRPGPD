@@ -7,4 +7,4 @@ Projeto em grupo do trabalho de <b>Programação Paralela</b>:
 <li>Lucas dos Santos</li>
 <li>Aron Garcia</li>
 <li>Pedro Senne</li>
-<li>Jean Vander</li>
+<li>Jean Wander</li>
