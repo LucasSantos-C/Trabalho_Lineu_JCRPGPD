@@ -1,0 +1,26 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Sequencial",
+      "request": "launch",
+      "mainClass": "com.example.Sequencial",
+      "vmArgs": "-Xmx3g"
+    },
+    {
+      "type": "java",
+      "name": "ExecService",
+      "request": "launch",
+      "mainClass": "com.example.ExecService",
+      "vmArgs": "-Xmx3g"
+    },
+    {
+      "type": "java",
+      "name": "AffinityService",
+      "request": "launch",
+      "mainClass": "com.example.AffinityService",
+      "vmArgs": "-Xmx3g --enable-native-access=ALL-UNNAMED --add-opens java.base/java.lang=ALL-UNNAMED"
+    }
+  ]
+}
