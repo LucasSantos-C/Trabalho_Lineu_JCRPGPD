@@ -1,0 +1,9 @@
+com\example\Test.class
+com\example\ExecService.class
+com\example\Transacao.class
+com\example\AffinityService.class
+com\example\Sequencial.class
+com\example\geraDados.class
+com\example\Paralelo.class
+com\example\ChecarSuspeito.class
+com\example\Estatistica.class
