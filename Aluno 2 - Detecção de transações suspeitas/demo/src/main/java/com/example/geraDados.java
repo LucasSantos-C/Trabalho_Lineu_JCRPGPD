@@ -12,7 +12,14 @@ class geraDados {
         String[] categorias = new String[5];
         String[] cidades = new String[50];
         String[] estados = new String[27];
-        for (int i = 0; i < categorias.length; i++) categorias[i] = "Categoria " + i;
+        String[] categorias = {
+            "Alimentação", 
+            "Transporte", 
+            "Saúde", 
+            "Eletrônicos", 
+            "Educação"
+        };
+        
         for (int i = 0; i < cidades.length; i++) cidades[i] = "Cidade " + i;
         for (int i = 0; i < estados.length; i++) estados[i] = "Estado " + i;
 
