@@ -1,0 +1,12 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "MainAluno03",
+      "request": "launch",
+      "mainClass": "com.example.MainAluno03",
+      "vmArgs": "-Xmx6g"
+    }
+  ]
+}
