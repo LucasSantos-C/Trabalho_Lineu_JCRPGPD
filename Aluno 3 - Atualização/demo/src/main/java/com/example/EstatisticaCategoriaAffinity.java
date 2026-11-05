@@ -10,6 +10,7 @@ import java.util.Map;
 import java.util.concurrent.*;
 
 public class EstatisticaCategoriaAffinity {
+    private static final ThreadFactory AFFINITY_FACTORY = new AffinityThreadFactory("AffinityWorker");
 
     private static class TarefaProcessamentoAffinity implements Callable<Map<String, EstatisticaCategoria>> {
         private final Transacao[] transacoes;
@@ -40,9 +41,7 @@ public class EstatisticaCategoriaAffinity {
     public static Map<String, EstatisticaCategoria> processar(Transacao[] transacoes, int numThreads) 
             throws InterruptedException, ExecutionException {
         
-        ThreadFactory affinityFactory = new AffinityThreadFactory("AffinityWorker-Aluno03");
-        ExecutorService executor = Executors.newFixedThreadPool(numThreads, affinityFactory);
-        
+        ExecutorService executor = Executors.newFixedThreadPool(numThreads, AFFINITY_FACTORY);        
         List<Future<Map<String, EstatisticaCategoria>>> futures = new ArrayList<>();
 
         int tamanho = transacoes.length;
