@@ -1,0 +1,40 @@
+INSTRUÇÕES — BENCHMARK E GRÁFICOS (MÓDULO DE DESEMPENHO / ALUNO 4)
+
+Este módulo é complementar à demonstração individual do Aluno 3.
+O Aluno 3 deve demonstrar principalmente MainAluno03.java, que apresenta
+quantidade, valor total, valor médio e maior transação por categoria.
+
+O MainBenchmark mede tempo, speedup e eficiência para diferentes volumes e
+quantidades de threads. Esses indicadores e os gráficos comparativos pertencem
+à análise de desempenho do trabalho em grupo, sob responsabilidade do Aluno 4.
+
+1. Abra a pasta demo no VS Code.
+2. Execute MainBenchmark.java.
+   - O benchmark testa 1, 2, 4 e 8 threads.
+   - Os volumes configurados são 1, 5 e 10 milhões de transações.
+   - Em cada configuração, os mapas estatísticos paralelo e com Affinity são
+     comparados com a referência sequencial, para confirmar que a medição usa
+     implementações que produzem os mesmos resultados.
+   - O programa grava resultados_benchmark.csv na pasta demo.
+
+3. Para gerar os gráficos comparativos, é necessário ter Python e Matplotlib
+   instalados. No terminal, dentro da pasta demo, execute:
+       python -m pip install matplotlib
+       python gerar_graficos.py
+
+4. Os arquivos PNG serão criados na pasta demo/graficos:
+   - comparacao_tempos.png
+   - comparacao_speedup.png
+   - comparacao_eficiencia.png
+
+IMPORTANTE:
+- Os gráficos são gerados a partir dos dados reais do CSV. Execute o benchmark
+  novamente após qualquer alteração ou nova medição.
+- Se alguma conferência falhar, investigue a divergência antes de apresentar
+  aquela medição como válida.
+- O benchmark mede uma execução por configuração; repetições com média ou
+  mediana podem tornar o estudo de desempenho mais robusto.
+- Os gráficos comparam somente o tempo de processamento; o tempo de geração
+  dos dados é exibido separadamente no terminal.
+- Não aumente para 50 milhões sem rever a memória necessária: o modelo atual
+  mantém todos os objetos Transacao em memória e já apresentou OutOfMemoryError.
