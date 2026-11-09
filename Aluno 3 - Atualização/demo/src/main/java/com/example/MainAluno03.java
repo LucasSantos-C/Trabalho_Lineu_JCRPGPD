@@ -6,7 +6,7 @@ import java.util.Map;
 public class MainAluno03 {
 
     public static void main(String[] args) throws Exception {
-        int totalTransacoes = 20_200_000; 
+        int totalTransacoes = 10_000_000; 
         long seed = 42L;                   
         int numThreads = 4;              
 
